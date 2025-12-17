@@ -1,0 +1,34 @@
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+// 1. Import library reporter (langsung dari internet, tidak perlu install npm)
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+
+export const options = {
+  vus: 100,
+  duration: '60s',
+  insecureSkipTLSVerify: true, 
+};
+
+export default function () {
+  const res = http.get('https://localhost:7289/api/Customer?search=anita&page=1&pageSize=10');
+  //const res = http.get('https://localhost:7289/api/Customer/fast-paging?lastSeenId=0&limit=20');
+
+  check(res, {
+    'status is 200': (r) => r.status === 200,
+    'response time < 500ms': (r) => r.timings.duration < 500,
+    'response time < 200ms': (r) => r.timings.duration < 200,
+    'response time < 50ms': (r) => r.timings.duration < 50,
+  });
+
+  sleep(1);
+}
+
+// 2. Fungsi ini akan jalan otomatis setelah test selesai untuk bikin file HTML
+export function handleSummary(data) {
+  return {
+    "report_benchmark.html": htmlReport(data),
+  };
+}
+
+//copy this to terminal:
+//k6 run --out web-dashboard load_test.js

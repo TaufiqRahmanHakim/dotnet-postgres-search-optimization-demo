@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CustomerDashboard/CustomerDashboard.csproj" />
+  <Project Path="Init Database/Init Database.csproj" />
+</Solution>
