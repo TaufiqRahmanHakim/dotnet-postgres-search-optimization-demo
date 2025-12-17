@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\customerdashboard\\customerdashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\customerdashboard\\customerdashboard\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\customerdashboard\\customerdashboard\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\customerdashboard\\customerdashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\customerdashboard\\customerdashboard\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,11 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "20251216183330_AddOptimizedIndexes.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\Migrations\\20251216183330_AddOptimizedIndexes.cs",
               "RelativeDocumentMoniker": "CustomerDashboard\\Migrations\\20251216183330_AddOptimizedIndexes.cs",
@@ -82,12 +82,11 @@
               "RelativeToolTip": "CustomerDashboard\\Migrations\\20251216183330_AddOptimizedIndexes.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAowBIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T18:33:30.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T18:33:30.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "20251216174857_addIndexing.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
               "RelativeDocumentMoniker": "CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
@@ -95,8 +94,7 @@
               "RelativeToolTip": "CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T17:48:57.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T17:48:57.415Z"
             },
             {
               "$type": "Document",
@@ -108,8 +106,7 @@
               "RelativeToolTip": "CustomerDashboard\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T16:58:19.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T16:58:19.737Z"
             },
             {
               "$type": "Document",
@@ -121,25 +118,37 @@
               "RelativeToolTip": "CustomerDashboard\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T16:58:04.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T16:58:04.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "CustomerDashboard\\Controllers\\CustomerController.cs",
               "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "CustomerDashboard\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAkwGkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwGkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T10:52:56.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\appsettings.json",
+              "RelativeDocumentMoniker": "CustomerDashboard\\appsettings.json",
+              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\appsettings.json",
+              "RelativeToolTip": "CustomerDashboard\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-16T10:48:11.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "CustomerDashboard\\Data\\ApplicationDbContext.cs",
@@ -147,34 +156,19 @@
               "RelativeToolTip": "CustomerDashboard\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAUwBsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T10:42:15.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T10:42:15.472Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Init Database",
+              "Title": "Init Database.csproj",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\Init Database\\Init Database.csproj",
               "RelativeDocumentMoniker": "Init Database\\Init Database.csproj",
               "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\Init Database\\Init Database.csproj",
               "RelativeToolTip": "Init Database\\Init Database.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-16T16:57:02.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\appsettings.json",
-              "RelativeDocumentMoniker": "CustomerDashboard\\appsettings.json",
-              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\CustomerDashboard\\CustomerDashboard\\appsettings.json",
-              "RelativeToolTip": "CustomerDashboard\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-16T10:48:11.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T16:57:02.264Z"
             },
             {
               "$type": "Document",
@@ -186,8 +180,7 @@
               "RelativeToolTip": "CustomerDashboard\\CustomerDashboard.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-16T10:40:57.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T10:40:57.282Z"
             },
             {
               "$type": "Document",
@@ -199,8 +192,7 @@
               "RelativeToolTip": "CustomerDashboard\\Services\\Interface\\ICustomer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:20:21.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T11:20:21.058Z"
             },
             {
               "$type": "Document",
@@ -212,8 +204,7 @@
               "RelativeToolTip": "CustomerDashboard\\DTO\\CustomerDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:21:51.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T11:21:51.486Z"
             },
             {
               "$type": "Document",
@@ -225,8 +216,7 @@
               "RelativeToolTip": "CustomerDashboard\\Model\\Customers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:29:02.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T11:29:02.16Z"
             },
             {
               "$type": "Document",
@@ -238,8 +228,7 @@
               "RelativeToolTip": "Init Database\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T10:17:04.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T10:17:04.712Z"
             },
             {
               "$type": "Document",
@@ -251,8 +240,7 @@
               "RelativeToolTip": "CustomerDashboard\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-16T10:15:31.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T10:15:31.295Z"
             },
             {
               "$type": "Document",
@@ -264,8 +252,7 @@
               "RelativeToolTip": "CustomerDashboard\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T10:09:52.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T10:09:52.59Z"
             },
             {
               "$type": "Bookmark",
