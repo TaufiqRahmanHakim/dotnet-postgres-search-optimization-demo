@@ -1,5 +1,4 @@
 ﻿using CustomerDashboard.Model;
-using CustomerDashboard.Services.Interface;
 using Microsoft.EntityFrameworkCore;
 
 namespace CustomerDashboard.Data {

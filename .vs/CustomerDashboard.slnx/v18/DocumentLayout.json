@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\model\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\model\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\model\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\model\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\migrations\\20251216174857_addindexing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\migrations\\20251216183330_addoptimizedindexes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\migrations\\20251216183330_addoptimizedindexes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|c:\\users\\taufiq\\source\\project\\latihan\\initgitcustomer\\dotnet-postgres-search-optimization-demo\\customerdashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41686372-6A5A-3681-ADA0-1209B316884A}|CustomerDashboard\\CustomerDashboard.csproj|solutionrelative:customerdashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,35 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20251216174857_addIndexing.cs",
-              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
-              "RelativeDocumentMoniker": "CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
-              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
-              "RelativeToolTip": "CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T17:48:57.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "CustomerDashboard\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\WeatherForecast.cs",
-              "RelativeToolTip": "CustomerDashboard\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T16:58:19.737Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "CustomerDashboard\\Controllers\\WeatherForecastController.cs",
@@ -112,13 +88,14 @@
               "RelativeDocumentMoniker": "CustomerDashboard\\Controllers\\CustomerController.cs",
               "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "CustomerDashboard\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAgwGkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAAEMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T10:52:56.561Z"
+              "WhenOpened": "2025-12-16T10:52:56.561Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\appsettings.json",
               "RelativeDocumentMoniker": "CustomerDashboard\\appsettings.json",
@@ -131,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Customers.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Model\\Customers.cs",
               "RelativeDocumentMoniker": "CustomerDashboard\\Model\\Customers.cs",
@@ -144,7 +121,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Program.cs",
+              "RelativeDocumentMoniker": "CustomerDashboard\\Program.cs",
+              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Program.cs",
+              "RelativeToolTip": "CustomerDashboard\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T10:09:52.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CustomerDashboard\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CustomerDashboard\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T10:42:15.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "CustomerDashboard\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\WeatherForecast.cs",
+              "RelativeToolTip": "CustomerDashboard\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T16:58:19.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20251216174857_addIndexing.cs",
+              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
+              "RelativeDocumentMoniker": "CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
+              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
+              "RelativeToolTip": "CustomerDashboard\\Migrations\\20251216174857_addIndexing.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T17:48:57.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "20251216183330_AddOptimizedIndexes.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Migrations\\20251216183330_AddOptimizedIndexes.cs",
               "RelativeDocumentMoniker": "CustomerDashboard\\Migrations\\20251216183330_AddOptimizedIndexes.cs",
@@ -156,19 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "CustomerDashboard\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "CustomerDashboard\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAUwBsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T10:42:15.472Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Init Database.csproj",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\Init Database\\Init Database.csproj",
               "RelativeDocumentMoniker": "Init Database\\Init Database.csproj",
@@ -180,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CustomerDashboard.csproj",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\CustomerDashboard.csproj",
               "RelativeDocumentMoniker": "CustomerDashboard\\CustomerDashboard.csproj",
@@ -192,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CustomerDto.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\DTO\\CustomerDto.cs",
               "RelativeDocumentMoniker": "CustomerDashboard\\DTO\\CustomerDto.cs",
@@ -204,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\Init Database\\Program.cs",
               "RelativeDocumentMoniker": "Init Database\\Program.cs",
@@ -216,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CustomerDashboard\\Properties\\launchSettings.json",
@@ -225,18 +240,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-16T10:15:31.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Program.cs",
-              "RelativeDocumentMoniker": "CustomerDashboard\\Program.cs",
-              "ToolTip": "C:\\Users\\Taufiq\\source\\Project\\Latihan\\InitGitCustomer\\dotnet-postgres-search-optimization-demo\\CustomerDashboard\\Program.cs",
-              "RelativeToolTip": "CustomerDashboard\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T10:09:52.59Z"
             },
             {
               "$type": "Bookmark",

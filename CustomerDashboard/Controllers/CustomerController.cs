@@ -22,19 +22,47 @@ namespace CustomerDashboard.Controllers {
             var query = _context.Customers.AsNoTracking().AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search)) {
-                var searchLower = search.ToLower();
+                var terms = search.Trim().ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-                //not optimized
-                //query = query.Where(c =>
-                //    EF.Functions.ILike(c.FirstName, $"{search}%") ||
-                //    EF.Functions.ILike(c.LastName, $"{search}%") ||
-                //    EF.Functions.ILike(c.City, $"{search}%"));
+                if (terms.Length > 0) {
+                    var firstWord = terms[0];
 
-                query = query.Where(c => 
-                    c.FirstName.ToLower().StartsWith(searchLower) || 
-                    c.LastName.ToLower().StartsWith(searchLower) ||
-                    c.City.ToLower().StartsWith(searchLower));
+                    query = query.Where(c =>
+                        c.FirstName.ToLower().StartsWith(firstWord) ||
+                        c.LastName.ToLower().StartsWith(firstWord) ||
+                        c.City.ToLower().StartsWith(firstWord)
+                    );
+
+                    if (terms.Length > 1) {
+                        foreach (var term in terms.Skip(1)) {
+                            var currentTerm = term;
+
+                            query = query.Where(c =>
+                                c.FirstName.ToLower().Contains(currentTerm) ||
+                                c.LastName.ToLower().Contains(currentTerm) ||
+                                c.City.ToLower().Contains(currentTerm)
+                            );
+                        }
+                    }
+                }
             }
+
+            #region not optimal for specific
+            //if (!string.IsNullOrWhiteSpace(search)) {
+            //    var searchLower = search.ToLower();
+
+            //    //not optimized
+            //    //query = query.Where(c =>
+            //    //    EF.Functions.ILike(c.FirstName, $"{search}%") ||
+            //    //    EF.Functions.ILike(c.LastName, $"{search}%") ||
+            //    //    EF.Functions.ILike(c.City, $"{search}%"));
+
+            //    query = query.Where(c => 
+            //        c.FirstName.ToLower().StartsWith(searchLower) || 
+            //        c.LastName.ToLower().StartsWith(searchLower) ||
+            //        c.City.ToLower().StartsWith(searchLower));
+            //}
+            #endregion
             var totalRecords = await query.CountAsync();
 
             var data = await query
