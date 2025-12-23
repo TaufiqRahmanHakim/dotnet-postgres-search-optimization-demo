@@ -36,6 +36,8 @@ Running `k6` with 50 Virtual Users resulted in system failure:
 ## After Optimization k6 Result vas 100 & 60 sec
 <img width="705" height="437" alt="image" src="https://github.com/user-attachments/assets/77ef3536-266e-4351-8c90-f886c6f2131a" />
 
+## (Update Redis + MessagePack) After Optimization vas 500 & 100 sec
+<img width="678" height="438" alt="image" src="https://github.com/user-attachments/assets/b04acf24-e73f-437a-a471-7d90358ff1f6" />
 
 ---
 
