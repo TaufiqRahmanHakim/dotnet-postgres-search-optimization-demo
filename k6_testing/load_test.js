@@ -4,13 +4,13 @@ import { check, sleep } from 'k6';
 import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
-  vus: 100,
-  duration: '60s',
+  vus: 200,
+  duration: '100s',
   insecureSkipTLSVerify: true, 
 };
 
 export default function () {
-  const res = http.get('https://localhost:7289/api/Customer?search=anita&page=1&pageSize=10');
+  const res = http.get('https://localhost:7289/api/Customer?search=Dimaz%20Laksmiwati&page=1&pageSize=10');
   //const res = http.get('https://localhost:7289/api/Customer/fast-paging?lastSeenId=0&limit=20');
 
   check(res, {
@@ -18,6 +18,9 @@ export default function () {
     'response time < 500ms': (r) => r.timings.duration < 500,
     'response time < 200ms': (r) => r.timings.duration < 200,
     'response time < 50ms': (r) => r.timings.duration < 50,
+    'response time < 10ms': (r) => r.timings.duration < 10,
+    'response time < 5ms': (r) => r.timings.duration < 5,
+
   });
 
   sleep(1);

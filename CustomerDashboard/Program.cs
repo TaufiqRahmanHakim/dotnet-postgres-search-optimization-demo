@@ -1,19 +1,26 @@
 
 
 using CustomerDashboard.Data;
+using CustomerDashboard.Service;
+using CustomerDashboard.Service.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 
 );
+//redis init
+var redisConnection = builder.Configuration.GetConnectionString("Redis");
+builder.Services.AddStackExchangeRedisCache(options => {
+    options.Configuration = redisConnection;
+    options.InstanceName = "CustomerInstance_"; 
+});
+builder.Services.AddScoped<ICacheService, CacheService>();
 
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();

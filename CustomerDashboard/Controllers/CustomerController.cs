@@ -1,8 +1,11 @@
 ﻿using CustomerDashboard.Data;
 using CustomerDashboard.DTO;
+using CustomerDashboard.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
 
 namespace CustomerDashboard.Controllers {
     [Route("api/[controller]")]
@@ -10,15 +13,26 @@ namespace CustomerDashboard.Controllers {
     public class CustomerController : ControllerBase {
 
         private readonly ApplicationDbContext _context;
+        private readonly IDistributedCache _cache;
+        private readonly ICacheService _cacheService;
 
-        public CustomerController(ApplicationDbContext context) {
+        public CustomerController(ApplicationDbContext context, IDistributedCache cache, ICacheService cacheService) {
             _context = context;
+            _cache = cache;
+            _cacheService = cacheService;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CustomerDto>>> GetCustomers(
             [FromQuery] string? search,
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10) {
+
+            string key = $"customer_GetCustomersBySearch_{search}_{page}_{pageSize}";
+            var cacheCustomer = await _cache.GetAsync(key);
+            if (cacheCustomer != null) { 
+                return await _cacheService.GetCustomerCache(key); 
+            }
+
             var query = _context.Customers.AsNoTracking().AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search)) {
@@ -77,10 +91,13 @@ namespace CustomerDashboard.Controllers {
                     Status = c.IsActive ? "Active" : "Inactive"
                 })
                 .ToListAsync();
+
+            await _cacheService.SetCustomerCache(data, key);
+
             return Ok(new {
-                TotalData = totalRecords,
-                Page = page,
-                Size = pageSize,
+                //TotalData = totalRecords,
+                //Page = page,
+                //Size = pageSize,
                 Data = data
             });
         }
@@ -88,6 +105,16 @@ namespace CustomerDashboard.Controllers {
         public async Task<ActionResult<IEnumerable<CustomerDto>>> GetCustomersFast(
             [FromQuery] int lastSeenId = 0,
             [FromQuery] int limit = 20) {
+
+            #region Redis Get and Check
+            string key = $"customer_fast-paging_{lastSeenId}";
+            var customer = await _cacheService.GetCustomerCache(key);
+            if(customer != null) {
+                return Ok(customer);
+            }
+
+            #endregion 
+
             var data = await _context.Customers
                 .AsNoTracking()
                 .OrderBy(c => c.Id)
@@ -101,6 +128,10 @@ namespace CustomerDashboard.Controllers {
                     Status = c.IsActive ? "Active" : "Inactive"
                 })
                 .ToListAsync();
+
+            #region Set Redis
+            await _cacheService.SetCustomerCache(data, key);
+            #endregion
 
             return Ok(data);
         }
