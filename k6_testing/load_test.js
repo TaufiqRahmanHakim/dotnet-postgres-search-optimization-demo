@@ -1,7 +1,7 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 // 1. Import library reporter (langsung dari internet, tidak perlu install npm)
-//import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
   vus: 500,
@@ -19,7 +19,9 @@ export const options = {
 };
 
 export default function () {
-  const res = http.get('https://localhost:7289/api/Customer?search=Dimaz%20Laksmiwati&page=1&pageSize=10');
+  //const res = http.get('https://localhost:7289/api/Customer?search=Dimaz%20Laksmiwati&page=1&pageSize=10');
+  const res = http.get('https://localhost:7289/api/Customer?search=Dimaz&page=1&pageSize=10');
+
   //const res = http.get('https://localhost:7289/api/Customer/fast-paging?lastSeenId=0&limit=20');
 
   check(res, {
@@ -29,17 +31,18 @@ export default function () {
     'response time < 50ms': (r) => r.timings.duration < 50,
     'response time < 10ms': (r) => r.timings.duration < 10,
     'response time < 5ms': (r) => r.timings.duration < 5,
+    'response time < 2ms': (r) => r.timings.duration < 2,
+
   });
 
   sleep(1);
 }
 
-// 2. Fungsi ini akan jalan otomatis setelah test selesai untuk bikin file HTML
-// export function handleSummary(data) {
-//   return {
-//     "report_benchmark.html": htmlReport(data),
-//   };
-// }
+export function handleSummary(data) {
+  return {
+    "report_benchmark.html": htmlReport(data),
+  };
+}
 
 
 //copy this to terminal:

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
+using ZiggyCreatures.Caching.Fusion;
 
 namespace CustomerDashboard.Controllers {
     [Route("api/[controller]")]
@@ -13,10 +14,11 @@ namespace CustomerDashboard.Controllers {
     public class CustomerController : ControllerBase {
 
         private readonly ApplicationDbContext _context;
-        private readonly IDistributedCache _cache;
+        //private readonly IDistributedCache _cache;
+        private readonly IFusionCache _cache;
         private readonly ICacheService _cacheService;
 
-        public CustomerController(ApplicationDbContext context, IDistributedCache cache, ICacheService cacheService) {
+        public CustomerController(ApplicationDbContext context, IFusionCache cache, ICacheService cacheService) {
             _context = context;
             _cache = cache;
             _cacheService = cacheService;
@@ -28,79 +30,118 @@ namespace CustomerDashboard.Controllers {
             [FromQuery] int pageSize = 10) {
 
             string key = $"customer_GetCustomersBySearch_{search}_{page}_{pageSize}";
-            var cacheCustomer = await _cacheService.GetCustomerCache(key);
-            if (cacheCustomer != null) {
-                return Ok(cacheCustomer);
-            }
 
-            var query = _context.Customers.AsNoTracking().AsQueryable();
+            var data = await _cacheService.GetCustomerCacheOrFetch(key, async () => {
 
-            if (!string.IsNullOrWhiteSpace(search)) {
-                var terms = search.Trim().ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                var query = _context.Customers.AsNoTracking().AsQueryable();
 
-                if (terms.Length > 0) {
-                    var firstWord = terms[0];
-
-                    query = query.Where(c =>
-                        c.FirstName.ToLower().StartsWith(firstWord) ||
-                        c.LastName.ToLower().StartsWith(firstWord) ||
-                        c.City.ToLower().StartsWith(firstWord)
-                    );
-
-                    if (terms.Length > 1) {
-                        foreach (var term in terms.Skip(1)) {
-                            var currentTerm = term;
-
-                            query = query.Where(c =>
-                                c.FirstName.ToLower().Contains(currentTerm) ||
-                                c.LastName.ToLower().Contains(currentTerm) ||
-                                c.City.ToLower().Contains(currentTerm)
-                            );
-                        }
+                if (!string.IsNullOrWhiteSpace(search)) {
+                    var terms = search.Trim().ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                    if (terms.Length > 0) {
+                        var firstWord = terms[0];
+                        query = query.Where(c =>
+                            c.FirstName.ToLower().StartsWith(firstWord) ||
+                            c.LastName.ToLower().StartsWith(firstWord) ||
+                            c.City.ToLower().StartsWith(firstWord));
                     }
                 }
-            }
 
-            #region not optimal for specific
-            //if (!string.IsNullOrWhiteSpace(search)) {
-            //    var searchLower = search.ToLower();
-
-            //    //not optimized
-            //    //query = query.Where(c =>
-            //    //    EF.Functions.ILike(c.FirstName, $"{search}%") ||
-            //    //    EF.Functions.ILike(c.LastName, $"{search}%") ||
-            //    //    EF.Functions.ILike(c.City, $"{search}%"));
-
-            //    query = query.Where(c => 
-            //        c.FirstName.ToLower().StartsWith(searchLower) || 
-            //        c.LastName.ToLower().StartsWith(searchLower) ||
-            //        c.City.ToLower().StartsWith(searchLower));
-            //}
-            #endregion
-            var totalRecords = await query.CountAsync();
-
-            var data = await query
-                .OrderBy(c => c.Id) 
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .Select(c => new CustomerDto {
-                    Id = c.Id,
-                    FullName = $"{c.FirstName} {c.LastName}",
-                    Email = c.Email,
-                    City = c.City,
-                    Status = c.IsActive ? "Active" : "Inactive"
-                })
-                .ToListAsync();
-
-            await _cacheService.SetCustomerCache(data, key);
-
-            return Ok(new {
-                //TotalData = totalRecords,
-                //Page = page,
-                //Size = pageSize,
-                Data = data
+                return await query
+                    .OrderBy(c => c.Id)
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .Select(c => new CustomerDto {
+                        Id = c.Id,
+                        FullName = $"{c.FirstName} {c.LastName}",
+                        Email = c.Email,
+                        City = c.City,
+                        Status = c.IsActive ? "Active" : "Inactive"
+                    })
+                    .ToListAsync();
             });
+
+            return Ok(new { Data = data });
         }
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<CustomerDto>>> GetCustomers(
+        //    [FromQuery] string? search,
+        //    [FromQuery] int page = 1,
+        //    [FromQuery] int pageSize = 10) {
+
+        //    string key = $"customer_GetCustomersBySearch_{search}_{page}_{pageSize}";
+        //    var cacheCustomer = await _cacheService.GetCustomerCache(key);
+        //    if (cacheCustomer != null) {
+        //        return Ok(cacheCustomer);
+        //    }
+
+        //    var query = _context.Customers.AsNoTracking().AsQueryable();
+
+        //    if (!string.IsNullOrWhiteSpace(search)) {
+        //        var terms = search.Trim().ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+        //        if (terms.Length > 0) {
+        //            var firstWord = terms[0];
+
+        //            query = query.Where(c =>
+        //                c.FirstName.ToLower().StartsWith(firstWord) ||
+        //                c.LastName.ToLower().StartsWith(firstWord) ||
+        //                c.City.ToLower().StartsWith(firstWord)
+        //            );
+
+        //            if (terms.Length > 1) {
+        //                foreach (var term in terms.Skip(1)) {
+        //                    var currentTerm = term;
+
+        //                    query = query.Where(c =>
+        //                        c.FirstName.ToLower().Contains(currentTerm) ||
+        //                        c.LastName.ToLower().Contains(currentTerm) ||
+        //                        c.City.ToLower().Contains(currentTerm)
+        //                    );
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    #region not optimal for specific
+        //    //if (!string.IsNullOrWhiteSpace(search)) {
+        //    //    var searchLower = search.ToLower();
+
+        //    //    //not optimized
+        //    //    //query = query.Where(c =>
+        //    //    //    EF.Functions.ILike(c.FirstName, $"{search}%") ||
+        //    //    //    EF.Functions.ILike(c.LastName, $"{search}%") ||
+        //    //    //    EF.Functions.ILike(c.City, $"{search}%"));
+
+        //    //    query = query.Where(c => 
+        //    //        c.FirstName.ToLower().StartsWith(searchLower) || 
+        //    //        c.LastName.ToLower().StartsWith(searchLower) ||
+        //    //        c.City.ToLower().StartsWith(searchLower));
+        //    //}
+        //    #endregion
+        //    var totalRecords = await query.CountAsync();
+
+        //    var data = await query
+        //        .OrderBy(c => c.Id) 
+        //        .Skip((page - 1) * pageSize)
+        //        .Take(pageSize)
+        //        .Select(c => new CustomerDto {
+        //            Id = c.Id,
+        //            FullName = $"{c.FirstName} {c.LastName}",
+        //            Email = c.Email,
+        //            City = c.City,
+        //            Status = c.IsActive ? "Active" : "Inactive"
+        //        })
+        //        .ToListAsync();
+
+        //    await _cacheService.SetCustomerCache(data, key);
+
+        //    return Ok(new {
+        //        //TotalData = totalRecords,
+        //        //Page = page,
+        //        //Size = pageSize,
+        //        Data = data
+        //    });
+        //}
         [HttpGet("fast-paging")]
         public async Task<ActionResult<IEnumerable<CustomerDto>>> GetCustomersFast(
             [FromQuery] int lastSeenId = 0,
