@@ -28,9 +28,9 @@ namespace CustomerDashboard.Controllers {
             [FromQuery] int pageSize = 10) {
 
             string key = $"customer_GetCustomersBySearch_{search}_{page}_{pageSize}";
-            var cacheCustomer = await _cache.GetAsync(key);
-            if (cacheCustomer != null) { 
-                return await _cacheService.GetCustomerCache(key); 
+            var cacheCustomer = await _cacheService.GetCustomerCache(key);
+            if (cacheCustomer != null) {
+                return Ok(cacheCustomer);
             }
 
             var query = _context.Customers.AsNoTracking().AsQueryable();

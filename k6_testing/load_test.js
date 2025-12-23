@@ -1,12 +1,21 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 // 1. Import library reporter (langsung dari internet, tidak perlu install npm)
-import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+//import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
-  vus: 200,
+  vus: 500,
   duration: '100s',
   insecureSkipTLSVerify: true, 
+  thresholds: {
+    'http_req_failed': ['rate<0.05'], 
+    
+    // Response time: 90% request harus di bawah 500ms
+    'http_req_duration': ['p(90)<500'],
+
+    // Custom Checks: LULUS jika > 80% check berhasil
+    'checks': ['rate>0.80'],
+  }
 };
 
 export default function () {
@@ -20,18 +29,19 @@ export default function () {
     'response time < 50ms': (r) => r.timings.duration < 50,
     'response time < 10ms': (r) => r.timings.duration < 10,
     'response time < 5ms': (r) => r.timings.duration < 5,
-
   });
 
   sleep(1);
 }
 
 // 2. Fungsi ini akan jalan otomatis setelah test selesai untuk bikin file HTML
-export function handleSummary(data) {
-  return {
-    "report_benchmark.html": htmlReport(data),
-  };
-}
+// export function handleSummary(data) {
+//   return {
+//     "report_benchmark.html": htmlReport(data),
+//   };
+// }
+
 
 //copy this to terminal:
 //k6 run --out web-dashboard load_test.js
+//k6 run --out web-dashboard=export=laporan_baru.html load_test.js
